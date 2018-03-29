@@ -1,2 +1,2 @@
-# eco.github.io
+# MisterLenivec.github.io
 Пробуем хостинг
