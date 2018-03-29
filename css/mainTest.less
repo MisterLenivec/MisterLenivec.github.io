@@ -1,0 +1,39 @@
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+#tableRow {
+	display: table-row;
+}
+nav, section, aside, footer {
+  background: #2db34a;
+  color: #fff;
+  padding: 5px 1px;
+  text-align: center;
+  margin: 0.2%;
+}
+section {
+  float: left;
+  width: 66.2%;
+  display: table-cell;
+
+}
+aside {
+  float: right;
+  width: 32.1%;
+  display: table-cell;
+}
+nav ul {
+
+  padding: 5px 0px 5px 0px;
+}
+
+nav ul li {
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+}

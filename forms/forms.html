@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms</title>
+    <script src="../js/main.js"></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<div id="container" class="lower">
+	  <header>
+		<nav>
+			<ul>
+				<span id="logo"><b>Green planet</b></span>
+				<li class="item"><a href="../index.html">Home</a></li>
+				<li class="item"><a href="../events.html">Events</a></li>
+				<li class="item"><a href="../about.html">About Us</a></li>
+				<li class="back"><a href="../events/eventsElonMusk.html">Back</a></li>
+			</ul>
+		</nav>
+	  </header>
+	  <div id="updown" title="up/down"></div>
+	  <main id="forms">
+	  	<div>
+	  		<section>
+	  			<article>
+	  				<form action="../js/handler.js" method="post">
+		  				<h1>Регистрация</h1>
+		  				<fieldset>
+		  					<label>
+	                    		<p><input placeholder="Ваше имя" name="firstName" maxlength="25" class="fieldsInput" pattern="[A-Za-zА-Яа-яЁё]{25}" autofocus required></p>
+	                    		<p><input placeholder="Ваша фамилия" name="lastName" maxlength="25" class="fieldsInput" pattern="[A-Za-zА-Яа-яЁё]{25}" required></p>
+	                    	</label>
+	                    </fieldset>
+	                    <fieldset>
+	                    	<label>
+	                    		<p><input type="email" placeholder="Ваш E-mail" name="E-mail" maxlength="30" class="fieldsInput" required> </p>
+	                    		<p><input type="tel" placeholder="Ваш телефон" name="tel" maxlength="11" class="fieldsInput" pattern="[0-9]{11}" required></p>
+	                    	</label>
+	                    </fieldset>
+	                    <fieldset>
+	                    	<label for="date"><strong>Ваш год рождения</strong></label>
+	                    		<p><input type="date" placeholder="Ваш год рождения" class="fieldsInput" name="date" required></p>
+	                    </fieldset>
+	                    <fieldset>
+	                    	<label>
+	                    		<p><strong>Что вы ожидаете увидеть на встрече</strong></p>
+   								<p><textarea name="edit" placeholder="Комментарий" class="fieldsInput"></textarea></p>
+	                    	</label>
+	                    </fieldset>
+	                    <fieldset>
+					    		<p><strong>Посещали ли вы наши мероприятия?<strong></p>
+					    		<label>
+					    			<p><input name="dzen" type="radio" value="nope" checked> Не посещал</p>
+					    		</label>
+					    		<label>
+					    			<p><input name="dzen" type="radio" value="heWas"> Посещал</p>
+					    		</label>
+						</fieldset>
+						<fieldset>
+	                    	<label>
+	                    		<p><strong>Введите ваш город</strong> <input name="city" list="city" class="fieldsInput"></p>
+	                    		<datalist id="city">
+							    	<option>Волгоград</option>
+								    <option>Воронеж</option>
+								    <option>Екатеринбург</option>
+								    <option>Казань</option>
+								    <option>Красноярск</option>
+								    <option>Москва</option>
+								    <option>Нижний Новгород</option>
+								    <option>Новосибирск</option>
+								    <option>Омск</option>
+								    <option>Пермь</option>
+								    <option>Ростов-на-Дону</option>
+								    <option>Самара</option>
+								    <option>Санкт-Петербург</option>
+								    <option>Уфа</option>
+								    <option>Челябинск</option>
+				    			</datalist>
+	                    	</label>
+	                    </fieldset>
+	                    <fieldset>
+	                    	<label>
+							    <p class="consent"><input type="checkbox" name="consent" value="agree" required> Я даю ООО НКО «Green planet» свое согласие на воспроизведение, использование, распространение, доведение до общего сведения, передачу в эфир и по кабелю своего изображения, содержащегося на видеозаписях и фотографиях, которые будут сделаны в ходе проведения Мероприятия, на которых мое изображение представлено полностью или фрагментарно, в цвете или нет, на обработку указанных видеозаписей и фотографий, в том числе на ретуширование, затемнение, искажение и иное изменение моего изображения.</p>
+							</label>
+							<label>
+							    <p class="consent"><input type="checkbox" name="consent" class="margTop" value="agree" required> Я даю свое согласие на передачу в ООО НКО «Green planet» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО НКО «Green planet» в течение 10 лет и будут обрабатываться исключительно для целей предложения мне вакансий ООО НКО «Green planet»», в соответствии с Федеральным законом «О персональных данных».</p>
+							</label>
+						</fieldset>
+	                    <p><input type="submit" id="megaButton"></p>
+					</form>
+	  			</article>
+	  		</section>
+	  		
+	  	</div>
+	  </main>
+	  <footer>
+			<p>See ya on mars!</p>
+		</footer>
+	</div>
+</body>
+</html>

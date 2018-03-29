@@ -1,0 +1,352 @@
+body {
+  font: 600 16px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+h1 {
+ 	font-size: 24px;
+ 	font-weight: bold;
+  padding: 15px 0;
+}
+#mainTitle::before, #mainTitle::after {
+  content: '';
+  background: #feea3b;
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 1%;
+}
+#mainTitle::before {
+  right: 10px;
+}
+#mainTitle::after {
+  left: 10px;
+}
+h2 {
+ 	font-weight: bold;
+  padding: 5px 0;
+}
+span {
+	font-size: 30px;
+	padding: 10px;
+}
+img {
+	border: 2px solid #4b6cb7;
+	border-radius: 6px;
+}
+.svg img {
+	border: none;
+	padding: 5%;
+}
+input {
+	border-radius: 6px;
+	padding: 2px;
+	margin: 1px 0;
+}
+textarea {
+	border-radius: 6px;
+	padding: 2px;
+	border: 2px;
+	height: 100px;
+}
+input:focus {
+	border: 2px solid #F9D423;
+}
+article:first-child {
+	border-top: none;
+}
+article {
+	border-top: 1px solid #061161;
+}
+section:first-child {
+	border-top: none;
+}
+section {
+	border-top: 3px solid #2c3e50;
+	padding-bottom: 5px;
+}
+#container {
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: auto;
+}
+#left, nav, main, aside, footer, #home {
+  border-radius: 6px;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+#animate {
+    padding: 10px;
+    text-align: left;
+    width: 55%;
+    margin: auto;
+}
+#home {
+    margin: 0 20% 0 20%;
+    border-left: 3px solid #2c3e50;
+    border-right: 3px solid #2c3e50;
+}
+.news {
+    width: 70%;
+}
+.leftText p {
+	text-align: left;
+}
+.fieldsInput {
+	width: 40%;
+	margin: 10px 0;
+}
+.advertising {
+	height: 200px;
+	margin: 10px 0;
+	border: 2px solid #4b6cb7;
+	border-radius: 6px;
+}
+#forms fieldset {
+    padding: 10px 0;   
+}
+#forms form h1 {
+    padding-bottom: 0;
+}
+#megaButton {
+	border: 0 none;
+    padding: 10px;
+    transition: all 200ms ease 0s;
+    background: #77A1D3;
+    color: #ffffff;
+}
+.margTop {
+	margin-top: 20px; 
+}
+.consent, .newsFoot {
+	line-height: 16px;
+	font-size: 14px;
+}
+.newsFoot {
+	font-style: italic;
+}
+.picRight {
+	float: right;
+	width: 300px;
+	margin: 0 0 5px 5px; 
+}
+.picLeft {
+	float: left;
+	width: 300px;
+    margin: 0 5px 5px 0;
+}
+#updown {
+	position: fixed;
+	top: 14%;
+	bottom: 7%;
+	width: 14.8%;
+    cursor: pointer;
+}
+.lower #updown {
+	position: fixed;
+	top: 14%;
+	bottom: 7%;
+	width: 5%;
+    cursor: pointer;
+}    
+#updown:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+.clearfix::after { 
+    content: '';
+    clear: both; 
+    display: block;
+    padding: 5px;
+   }
+#left {
+	float: left;
+	width: 19.5%;
+}
+main {
+	border-left: 3px solid #2c3e50; /*Нужны ли боковые рамки?*/
+    border-right: 3px solid #2c3e50;
+	padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+aside {
+	width: 19.5%;
+	float: right;
+}
+nav {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: #2980b9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.regUl {
+	margin-bottom: 5px;
+	padding: 5px 0px 5px 0px;
+}
+.regLi {
+	font-size: 120%;
+	border: 1px solid #feea3b;
+	font-weight: bold;
+}
+.regLi:hover {
+	background: rgb(223, 235, 56, 0.9);
+	transition: 1s;
+}
+.regDisabled {
+	font-size: 120%;
+	border: 1px solid #808080;
+	font-weight: bold;
+}
+.regDisabled:hover {
+	background: rgb(184, 184, 184, 0.9);
+	color: black;
+	transition: 1s;
+}
+nav ul {
+  margin: 0;
+  padding: 5px 0px 5px 0px;
+}
+
+nav ul li, .regUl li {
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+}
+a:link, a:visited {
+  color: white;
+  border-bottom: none;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+}
+nav ul li a {
+	white-space: nowrap;
+}
+nav ul li.selected {
+  background-color: lightgreen;
+  font-weight: bold;
+  color: white;
+  border: 3px solid #4B79A1;
+}
+nav ul li.back {
+  font-weight: bold;
+  color: white;
+  border: 1px solid #feea3b;
+}
+footer {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background: #0099F7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0099F7, #F11712);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0099F7, #F11712); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.minPrev, .minNext {
+    width: 50%;
+	padding: 20px;
+	font-size: 2em;
+	display: none;
+}
+.minPrev:hover, .minNext:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+.minPrev {
+    float: left;
+}
+.minNext {
+	float: right;
+}
+/*Стрелки в новостях - Начало*/
+.arrow { padding: 30px 30px;}
+.prevArrow {
+  position: fixed;
+  padding: 30px 30px;
+  top: 50%;
+  left: 1%;
+
+}
+.nextArrow {
+  position: fixed;
+  padding: 30px 30px;
+  top: 50%;
+  right: 1%;
+
+}
+.prevLineArrowContainer {
+  position: absolute;
+  padding: 29px 19px;
+  top: 0%;
+  right: 0%;
+  transition: 1s;
+}
+.nextLineArrowContainer {
+  position: absolute;
+  padding: 29px 19px;
+  top: 0%;
+  left: 0%;
+  transition: 1s;
+}
+.upperLineArrow, .lowerLineArrow {
+  position: absolute;
+  display: inline-block;
+  padding: 0 20px;
+  border-bottom: 5px solid lightgray;
+}
+.prevArrow .prevLineArrowContainer .upperLineArrow {
+  top: 15px;
+  left: 0%;
+  transform: rotate(135deg);
+}
+.prevArrow .prevLineArrowContainer .lowerLineArrow {
+  top: 41px;
+  left: 0%;
+  transform: rotate(-135deg);
+}
+.nextArrow .nextLineArrowContainer .upperLineArrow {
+  top: 15px;
+  right: 0%;
+  transform: rotate(45deg);
+}
+.nextArrow .nextLineArrowContainer .lowerLineArrow {
+  top: 41px;
+  right: 0%;
+  transform: rotate(-45deg);
+}
+@keyframes translating {
+  0%   { transform: translate(0%, 0%); }
+  100% { transform: translate(-50%, 0%); /*background: rgba(0, 0, 0, 0.2);*/ }
+}
+.prevArrow:hover .prevLineArrowContainer { animation: translating 1s linear infinite; }
+
+@keyframes nextTranslating {
+  0%   { transform: translate(0%, 0%); }
+  100% { transform: translate(50%, 0%); /*background: rgba(0, 0, 0, 0.2);*/ }
+}
+.nextArrow:hover .nextLineArrowContainer { animation: nextTranslating 1s linear infinite; }
+/*Стрелки в новостях - Конец*/
+@media all and (max-width: 420px) {
+  main, footer, #home, .news, .picLeft, .picRight {
+    float: none;
+    width: auto;
+    margin: 2px auto;
+    border-left: none;
+    border-right: none;
+  }
+  #container {
+  	margin: 0;
+  	min-height: initial;
+  }
+  .regUl li {
+  	display: block;
+  }
+  .prevArrow, .nextArrow, aside, #left {
+	display: none;
+  }
+  .minPrev, .minNext {
+  	display: block;
+  }
+  /*min-height: initial;*/
+}
