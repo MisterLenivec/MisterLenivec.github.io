@@ -1,0 +1,795 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em;
+    background: #ccc;
+    color: #000;
+    padding: 1em;
+}
+.browserupgrade a {
+  color: red;
+  font-size: 1.5em;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.grid {
+    max-width: 1900px;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 80px 1.7fr 1.3fr 80px;
+        grid-template-columns: 80px 1.7fr 1.3fr 80px;
+            grid-template-areas: "header header header header"
+                             "updown mainPic mainPic rightSpace"
+                             "updown main aside rightSpace"
+                             "updown aboutMe asideAboutMe rightSpace"
+                             "updown prices gallery rightSpace"
+                             "updown contacts contacts rightSpace"
+                             "updown map vkWrapper rightSpace"
+                             "footer footer footer footer";
+    /*background: #00c6ff;
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+    background: linear-gradient(to right, #0072ff, #00c6ff);*/
+    /*background: rgb(243, 243, 243);*/
+        background: url(../img/bg/brickwall_@2X.png); /* Background pattern from Subtle Patterns */
+}
+header, #updown, #mainPic, aside, #main, #rightSpace, #aboutMe, #asideAboutMe, #gallery, #prices, #contacts, footer, nav, .item, #logo, #info, #map {
+    padding: 5px;
+}
+header, #updown, #mainPic, aside, #main, #rightSpace, #aboutMe, #asideAboutMe, #gallery, #prices, #contacts, footer, #map, #vkWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    /*background: url(../img/bg/husk.png);*/ /* Background pattern from Subtle Patterns */
+}
+header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: header;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+#updown {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 6;
+    -ms-grid-column: 1;
+    grid-area: updown;
+    cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#updown.up::before, #updown.down::before {
+    content: '↕';
+    position: fixed;
+    top: 50%;
+    font-size: 1.5em;
+}
+#updown:hover {
+    background: rgba(65, 172, 242, 0.2);
+}
+#mainPic {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: mainPic;
+}
+#rightSpace {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 6;
+    -ms-grid-column: 4;
+    grid-area: rightSpace;
+}
+#main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: main;
+}
+.pic {
+    width: 100%;
+}
+aside {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: aside;
+}
+#aboutMe {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: aboutMe;
+}
+#asideAboutMe {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    grid-area: asideAboutMe;
+}
+#gallery {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: gallery;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#prices {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: prices;
+}
+#contacts {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: contacts;
+    /*background: url(../img/bg/doodles.png);*/ /* Background pattern from Subtle Patterns */
+}
+#map {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+    grid-area: map;
+}
+#vkWrapper {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    grid-area: vkWrapper;
+}
+footer {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: footer;
+    -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background: rgb(180, 180, 180); /* Background pattern from Subtle Patterns */
+    font-size: 1em;
+    line-height: 0.5;
+}
+footer h4 {
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.item {
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.item:hover {
+    background: rgb(129, 171, 226);
+}
+.item a {
+    min-width: 65px;
+    padding: 10px 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.item a:hover {
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+   color: #1E90FF;
+}
+.item, #logo, #info {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+#logo, nav, #info {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0;
+}
+#logo {
+    font-family: 'Satisfy', cursive;
+    color: red;
+}
+#logo p {
+  font-size: 220%;
+    margin: 5px 0;
+}
+.contactsTel {
+    color: blue;
+    white-space: nowrap;
+}
+.record {
+    font-size: 1.2em;
+    margin: 0;
+}
+.noteRight {
+    border-left: 20px solid rgb(180, 180, 180);
+    padding: 15px 5px;
+    width: 50%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    background: url(../img/bg/husk.png);
+    font-style: italic;
+    font-size: 90%;
+}
+.noteLeft {
+    border-right: 20px solid rgb(180, 180, 180);
+    padding: 2px 5px;
+    width: 90%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    background: url(../img/bg/husk.png);
+    font-style: italic;
+    font-size: 90%;
+}
+.center {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
+.lowSize {
+    font-size: 90%;
+}
+.iconsContainer {
+    margin-bottom: 15px;
+}
+.iconList {
+    list-style-type: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.descriptionIcons {
+    /*border: 1px solid black;
+    border-radius: 6px;
+    background: yellow;*/
+    margin: 5px 10px;
+}
+.social {
+    margin: 10px  15px 15px 15px;
+}
+.social i {
+    padding: 0 7px;
+}
+.linkIcons {
+    text-decoration: none;
+}
+.icons {
+    width: 70px;
+}
+.leftFoot, .centerFoot, .rightFoot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.fa-arrow-circle-up {
+    color: black;
+}
+.linkTop {
+    display: none;
+}
+.fa-arrow-circle-up:hover, .social .fa:hover {
+   color: #1E90FF;
+}
+/*Slider*/
+.mySlides {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 400px;
+}
+.centerDotBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: bottom;
+      -ms-flex-align: bottom;
+          align-items: bottom;
+}
+.prev, .next {
+  cursor: pointer;
+  padding: 16px 50px;
+  font-weight: bold;
+  font-size: 2em;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.prev:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 10px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: background-color: 0.6s ease;
+  -o-transition: background-color: 0.6s ease;
+  transition: background-color: 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.slidePic {
+  max-height: 400px;
+  max-width: 100%;
+  border: 3px solid rgb(243, 243, 243);
+}
+@-webkit-keyframes fade {
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+@keyframes fade {
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+h1 {
+  font-size: 160%;
+}
+h1, h2, h4 {
+    /*-ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;*/
+    /*Но IE думает по другому, поэтому...*/
+    margin: 5px auto;
+    font-family: 'Lobster', cursive;
+}
+@media (max-width: 1050px) {
+    #info {
+        display: none;
+    }
+}
+@media all and (min-width: 800px) and (max-width: 1050px) {
+    .grid {
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        -ms-grid-columns: 80px 1.7fr 1.3fr 80px;
+            grid-template-columns: 80px 1.7fr 1.3fr 80px;
+                grid-template-areas: "header header header header"
+                                 "updown mainPic mainPic rightSpace"
+                                 "updown main aside rightSpace"
+                                 "updown aboutMe aboutMe rightSpace"
+                                 "updown asideAboutMe asideAboutMe rightSpace"
+                                 "updown prices gallery rightSpace"
+                                 "updown contacts contacts rightSpace"
+                                 "updown map vkWrapper rightSpace"
+                                 "footer footer footer footer";
+    }
+}
+@media (max-width: 800px) {
+    .grid {
+            -ms-grid-rows: auto;
+                grid-template-rows: auto;
+            -ms-grid-columns: 1fr;
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                                     "mainPic"
+                                     "main"
+                                     "aside"
+                                     "aboutMe"
+                                     "asideAboutMe"
+                                     "gallery"
+                                     "prices"
+                                     "contacts"
+                                     "map"
+                                     "vkWrapper"
+                                     "footer";
+    }
+    #updown, #rightSpace {
+        display: none;
+    }
+    #vkWrapper {
+        width: 100%;
+    }
+    .descriptionIcons {
+        margin: 2px;
+    }
+    .record {
+        border: none;
+    }
+    .noteRight {
+        width: 90%;
+    }
+    .centerFoot {
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1;
+    }
+    .leftFoot, .centerFoot, .rightFoot {
+        margin: 5px 0;
+    }
+    .social {
+        margin: 7px;
+    }
+    .linkTop {
+        display: block;
+    }
+    footer h4 {
+        margin-top: 5px;
+    }
+    footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+}
+/*MS EDGE 14+*/
+@supports (-ms-ime-align:auto)
+and (not (-ms-accelerator:true)) {
+  #vk_groups {
+    margin: auto;
+  }
+  @media (max-width: 800px) {
+    .grid {
+      display: block;
+    }
+  }
+}
+/*IE 10 and 11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid {
+    text-align: center;
+    display: block;
+  }
+  ul {
+    display: inline-block;
+  }
+  .iconsContainer {
+    display: none;
+  }
+  .pic {
+    height: 100%;
+  }
+  #updown {
+    display: none;
+  }
+  #aboutMe {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
