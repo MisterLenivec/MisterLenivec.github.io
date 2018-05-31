@@ -5,6 +5,7 @@
 	<title>lenivaCompany</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<header>
@@ -22,11 +23,11 @@
 		</nav>
 	</header>
 	<main>
-		<div class="main__welcome">
+		<section class="main__welcome">
 			<h1>WELCOME ON <span class="lenivacompany">LENIVACOMPANY</span></h1>
 			<p>We are a digital agency with <span class="lighterBolder">years of experience</span> and with <span class="lighterBolder">extraordinary people</span></p>
-		</div>
-		<div class="wrapper">
+		</section>
+		<section class="wrapper">
 			<div class="main__about">
 				<div class="about__left">
 					<img class="mw-100" src="img/mac.png" alt="mac">
@@ -41,11 +42,10 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<div class="main__team">
+		</section>
+		<section class="main__team">
 			<div class="wrapper">
 				<h2>OUR TEAM</h2>
-				<div class="line"></div>
 				<div class="team__cards">
 					<div class="card">
 						<div class="photo"></div>
@@ -73,11 +73,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="main__services">
+		</section>
+		<section class="main__services">
 			<div class="wrapper">
 				<h2>OUR SERVICES</h2>
-				<div class="line"></div>
 				<p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</i></p>
 				<div class="services__cards">
 					<div class="services__card">
@@ -102,11 +101,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="main__clients">
+		</section>
+		<section class="main__clients">
 			<div class="wrapper">
 				<h2><span class="lighter">SOME OF</span> OUR CLIENTS</h2>
-				<div class="line"></div>
 				<div class="clients">
 					<img src="img/chanel.png" alt="">
 					<img src="img/zara.png" alt="">
@@ -115,11 +113,10 @@
 					<img src="img/lacoste.png" alt="">
 				</div>
 			</div>
-		</div>
-		<div class="wrapper">
+		</section>
+		<section class="wrapper">
 			<div class="main__work">
 				<h2><span class="lighter">TAKE A LOOK AT</span> <span class="bolder">OUR WORK</span></h2>
-				<div class="line"></div>
 				<p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</i></p>
 				<div class="gallery">
 					<div class="line1">
@@ -142,24 +139,24 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="main__testimonials">
+		</section>
+		<section class="main__testimonials">
 			<div class="wrapper">
 				<h2>our clients’ <span class="lighter">testimonials</span></h2>
-				<div class="line"></div>
 				<p class="testimonial">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 				<h4>Dean Martin<span class="lighter">, CEO Acme Inc.</span></h4>
 			</div>
-		</div>
+		</section>
 		<section class="contact__form">
 			<div class="contact__wrapper">
+				<h2>CONTACT FORM</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				<form action="#" name="newform" method="post">
 					<div class="form__inputs">
-						<p>Name <span class="red">*</span></p>
-						<input type="text">
-						<p>Email address <span class="red">*</span></p>
-						<input type="text">
+						<p>Name <span class="red">*</span><input type="text"></p>
+						<p>Email address <span class="red">*</span><input type="text"></p>
 					</div>
+					<p>Message <span class="red">*</span></p>
 					<textarea name="text"></textarea>
 					<div class="button__block">
 						<input type="submit" value="SEND">
@@ -168,6 +165,17 @@
 			</div>
 		</section>
 	</main>
+	<footer>
+		<div class="wrapper">
+			<div class="social">
+				<a href=""><img src="img/facebook.png" alt=""></a>
+				<a href=""><img src="img/twitter.png" alt=""></a>
+				<a href=""><img src="img/google.png" alt=""></a>
+				<a href=""><img src="img/linkedin.png" alt=""></a>
+				<a href=""><img src="img/dribbble.png" alt=""></a>
+			</div>
+		</div>
+	</footer>
 	<script src="script.js"></script>
 </body>
 </html>
